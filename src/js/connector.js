@@ -8,13 +8,13 @@ window.TrelloPowerUp.initialize({
                 // console.log(card);
                 return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=43.610769&lon=3.876716&exclude=minutely,hourly,alerts&appid=%%APP_ID%%')
                     .then(function (response) {
-                        console.log(response);
+                        // console.log(response);
                         return response.json();
                     })
                     .then(function (weatherData) {
                         // console.log("weatherdata: ");
                         // console.log(weatherData);
-                        console.log(card);
+                        // console.log(card);
 
                         if (card.name === "j") {
                             return [{
