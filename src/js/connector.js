@@ -6,7 +6,7 @@ window.TrelloPowerUp.initialize({
         return t.card('all')
             .then(function (card) {
                 console.log(card);
-                fetch('https://api.openweathermap.org/data/2.5/weather?lat=43.610769&lon=3.876716&appid=%%APP_ID%%')
+                return fetch('https://api.openweathermap.org/data/2.5/weather?lat=43.610769&lon=3.876716&appid=%%APP_ID%%')
                     .then(function (response) {
                         console.log(response);
                         return response.json();
