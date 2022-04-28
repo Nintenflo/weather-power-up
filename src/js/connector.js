@@ -16,15 +16,31 @@ window.TrelloPowerUp.initialize({
                         // console.log(weatherData);
                         console.log(card);
 
-                        return [{
-                            icon: `https://openweathermap.org/img/w/${weatherData.daily[0].weather[0].icon}.png`,
-                            text: weatherData.daily[0].weather[0].main
-                        },
+                        if (card.name === "j") {
+                            return [{
+                                icon: `https://openweathermap.org/img/w/${weatherData.daily[0].weather[0].icon}.png`,
+                                text: weatherData.daily[0].weather[0].main
+                            }]
+                        }
+                        else if (card.name === "j+1") 
                         {
-                            icon: `https://openweathermap.org/img/w/${weatherData.daily[1].weather[0].icon}.png`,
-                            text: weatherData.daily[1].weather[0].main
-
-                        }]
+                            return [{
+                                icon: `https://openweathermap.org/img/w/${weatherData.daily[1].weather[0].icon}.png`,
+                                text: weatherData.daily[1].weather[0].main
+                            }]
+                        }
+                        else if (card.name === "j+2") {
+                            return [{
+                                icon: `https://openweathermap.org/img/w/${weatherData.daily[2].weather[0].icon}.png`,
+                                text: weatherData.daily[2].weather[0].main
+                            }]
+                        }
+                        else if (card.name === "j+3") {
+                            return [{
+                                icon: `https://openweathermap.org/img/w/${weatherData.daily[3].weather[0].icon}.png`,
+                                text: weatherData.daily[3].weather[0].main
+                            }]
+                        }
                     });
 
             });
