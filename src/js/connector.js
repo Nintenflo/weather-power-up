@@ -17,12 +17,12 @@ window.TrelloPowerUp.initialize({
                         console.log(card);
 
                         return [{
-                            icon: `https://openweathermap.org/img/w/${weatherData.daily[0].weather.icon}.png`,
-                            text: weatherData.daily[0].weather.main
+                            icon: `https://openweathermap.org/img/w/${weatherData.daily[0].weather[0].icon}.png`,
+                            text: weatherData.daily[0].weather[0].main
                         },
                         {
-                            icon: `https://openweathermap.org/img/w/${weatherData.daily[1].weather.icon}.png`,
-                            text: weatherData.daily[1].weather.main
+                            icon: `https://openweathermap.org/img/w/${weatherData.daily[1].weather[0].icon}.png`,
+                            text: weatherData.daily[1].weather[0].main
 
                         }]
                     });
