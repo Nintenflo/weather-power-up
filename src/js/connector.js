@@ -6,11 +6,14 @@ window.TrelloPowerUp.initialize({
         return t.card('all')
             .then(function (card) {
                 console.log(card);
-                fetch('https://api.openweathermap.org/data/2.5/weather?lat=43.610769&lon=3.876716&appid=2ff5f0db9251c46e0020f6a608efdeaf')
+                fetch('https://api.openweathermap.org/data/2.5/weather?lat=43.610769&lon=3.876716&appid=%%APP_ID%%')
                     .then(function (response) {
+                        console.log(response);
                         return response.json();
                     })
                     .then(function (weatherData) {
+                        console.log("weatherdata: ");
+                        console.log(weatherData);
                         return [{
                             text: weatherData.main.temp.toString()
                         },
